@@ -375,8 +375,7 @@ function showNextNotification() {
     
     notificationContainer.appendChild(notification);
     
-    // Play notification sound for each new notification
-    playNotificationSound();
+    // Don't play sound here - only play on user interaction
     
     currentAdIndex++;
 }
