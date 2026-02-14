@@ -383,9 +383,14 @@ function showNextNotification() {
 
 function playNotificationSound() {
     // Create a new audio instance each time to ensure it plays
-    const sound = new Audio('sounds/NOTIFICATION.wav');
+    const sound = new Audio('sounds/notification.wav');
     sound.volume = 0.5; // Set volume to 50%
-    sound.play().catch(e => console.log('Notification sound failed:', e));
+    console.log('Playing notification sound...');
+    sound.play().then(() => {
+        console.log('Notification sound played successfully');
+    }).catch(e => {
+        console.log('Notification sound failed:', e);
+    });
 }
 
 function closeNotification(notification) {
