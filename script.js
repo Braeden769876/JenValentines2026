@@ -375,14 +375,17 @@ function showNextNotification() {
     
     notificationContainer.appendChild(notification);
     
-    // Try to play notification sound
-    try {
-        notificationAudio.play().catch(e => console.log('Notification sound failed:', e));
-    } catch (e) {
-        console.log('Notification sound error:', e);
-    }
+    // Play notification sound for each new notification
+    playNotificationSound();
     
     currentAdIndex++;
+}
+
+function playNotificationSound() {
+    // Create a new audio instance each time to ensure it plays
+    const sound = new Audio('sounds/NOTIFICATION.wav');
+    sound.volume = 0.5; // Set volume to 50%
+    sound.play().catch(e => console.log('Notification sound failed:', e));
 }
 
 function closeNotification(notification) {
