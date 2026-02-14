@@ -375,7 +375,8 @@ function showNextNotification() {
     
     notificationContainer.appendChild(notification);
     
-    // Don't play sound here - only on user interaction
+    // Play sound when notification appears
+    playNotificationSound();
     
     currentAdIndex++;
 }
@@ -391,8 +392,7 @@ function playNotificationSound() {
 }
 
 function closeNotification(notification) {
-    // Play sound on user interaction (closing notification)
-    playNotificationSound();
+    // Don't play sound here - only when notification appears
     
     notification.style.animation = 'slideOutRight 0.5s ease-out';
     setTimeout(() => {
