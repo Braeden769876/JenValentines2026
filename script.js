@@ -394,6 +394,9 @@ function playNotificationSound() {
 }
 
 function closeNotification(notification) {
+    // Play sound on user interaction (closing notification)
+    playNotificationSound();
+    
     notification.style.animation = 'slideOutRight 0.5s ease-out';
     setTimeout(() => {
         notification.remove();
@@ -402,6 +405,9 @@ function closeNotification(notification) {
 }
 
 function handleAdClick(adId) {
+    // Play sound on user interaction (clicking ad)
+    playNotificationSound();
+    
     if (adId === 9) {
         transitionToPage(yeahYouDoPage);
     } else if (adId === 10) {
