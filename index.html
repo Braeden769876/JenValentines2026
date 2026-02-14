@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenna Jenna 💕</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container"></div>
+    
+    <!-- Name Entry Page -->
+    <div id="namePage" class="page active">
+        <div class="container">
+            <div class="heart-logo">💕</div>
+            <h1 class="title">Are You My Valentine?</h1>
+            <p class="subtitle">Enter your name to continue</p>
+            <div class="input-group">
+                <input type="text" id="nameInput" placeholder="Your name..." autocomplete="off">
+                <button id="submitName" class="btn-primary">Continue 💝</button>
+            </div>
+            <div id="nameError" class="error-message">NO YOU'RE NOT</div>
+        </div>
+    </div>
+    
+    <!-- Quiz Page -->
+    <div id="quizPage" class="page">
+        <div class="quiz-container">
+            <div class="quiz-header">
+                <h2>Yes You Are 💕</h2>
+                <div class="progress-bar">
+                    <div id="progress" class="progress-fill"></div>
+                </div>
+                <span id="questionNumber">Question 1 of 12</span>
+            </div>
+            
+            <div id="questionContainer" class="question-container">
+                <h3 id="questionText" class="question-text"></h3>
+                <div id="answersContainer" class="answers-grid"></div>
+            </div>
+            
+            <div class="quiz-footer">
+                <button id="nextQuestion" class="btn-secondary" disabled>Next Question →</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Results Page -->
+    <div id="resultsPage" class="page">
+        <div class="results-container">
+            <div class="results-header">
+                <h2 class="results-title">Perfect Match! 💕</h2>
+            </div>
+            <div class="results-message">
+                <p>You got <span id="scoreText">12 out of 12!</span>!</p>
+                <div class="heart-animation">💕</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Popup Notification Container -->
+    <div id="notificationContainer" class="notification-container"></div>
+    
+    <!-- Special Pages -->
+    <div id="whatTheHellPage" class="page">
+        <div class="special-container">
+            <h2 class="special-title">What the fwick are you doing Jenna?</h2>
+            <p class="special-message">AW HELL NAH</p>
+            <button id="backToQuiz" class="btn-primary">Get Back to the Quiz 💝</button>
+        </div>
+    </div>
+    
+    <div id="yeahYouDoPage" class="page">
+        <div class="special-container">
+            <h2 class="special-title">real</h2>
+            <p class="special-message">FREAK</p>
+            <button id="backToQuiz2" class="btn-primary">Back to the Quiz 💝</button>
+        </div>
+    </div>
+    
+    <div id="placeholderPage" class="page">
+        <div class="special-container">
+            <h2 class="special-title">real</h2>
+            <p class="special-message">He loves you more</p>
+            <button id="backToQuiz4" class="btn-primary">Back to the Quiz 💝</button>
+        </div>
+    </div>
+    
+    <div id="secretPage" class="page">
+        <div class="special-container">
+            <h2 class="special-title">You Found It! 💕</h2>
+            <div class="secret-content">
+                <p>Lovey Dovey page because I lovey wovey you</p>
+                <div class="heart-animation">💕</div>
+            </div>
+            <button id="audioToggle" class="btn-primary">Make it stop</button>
+            <button id="backToQuiz3" class="btn-primary">Start Over 💝</button>
+        </div>
+    </div>
+    
+    <div id="virusPage" class="page">
+        <div class="virus-container">
+            <div class="virus-alert">
+                <h2>⚠️ CRITICAL SYSTEM ERROR ⚠️</h2>
+                <p>YOUR COMPUTER HAS BEEN COMPROMISED</p>
+                <div class="virus-details">
+                    <p>Malware detected: LOVE-19.exe</p>
+                    <p>System files corrupted: 87%</p>
+                    <p>Personal data stolen: YES</p>
+                    <p>Webcam activated: ACTIVE</p>
+                </div>
+                <div class="countdown">
+                    <span id="virusCountdown">15</span>
+                    <p>seconds until total system failure...</p>
+                </div>
+                <div class="virus-message">
+                    <p>THERE IS NO ESCAPE</p>
+                    <p>YOUR FILES ARE GONE FOREVER</p>
+                </div>
+                <div class="virus-buttons">
+                    <button id="virusCancel" class="btn-danger">CANCEL (USELESS)</button>
+                    <button id="virusOK" class="btn-danger">OK (ALSO USELESS)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
