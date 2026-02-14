@@ -375,7 +375,7 @@ function showNextNotification() {
     
     notificationContainer.appendChild(notification);
     
-    // Don't play sound here - only play on user interaction
+    // Don't play sound here - only on user interaction
     
     currentAdIndex++;
 }
@@ -402,8 +402,7 @@ function closeNotification(notification) {
 }
 
 function handleAdClick(adId) {
-    // Play sound on user interaction (clicking ad)
-    playNotificationSound();
+    // Don't play sound here - only when closing to avoid double sounds
     
     if (adId === 9) {
         transitionToPage(yeahYouDoPage);
