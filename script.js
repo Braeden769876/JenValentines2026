@@ -382,11 +382,9 @@ function showNextNotification() {
 }
 
 function playNotificationSound() {
-    // Create a new audio instance each time to ensure it plays
-    const sound = new Audio('sounds/notification.wav');
-    sound.volume = 0.5; // Set volume to 50%
-    console.log('Playing notification sound...');
-    sound.play().then(() => {
+    // Use the same audio approach that works for other sounds
+    notificationAudio.currentTime = 0;
+    notificationAudio.play().then(() => {
         console.log('Notification sound played successfully');
     }).catch(e => {
         console.log('Notification sound failed:', e);
@@ -425,15 +423,8 @@ function showJennaOrVirus() {
     notificationsActive = false;
     notificationContainer.innerHTML = '';
 
-    // Check if jenna1.png exists, otherwise show virus
-    const img = new Image();
-    img.onload = function() {
-        showSecretPage();
-    };
-    img.onerror = function() {
-        showVirusPage();
-    };
-    img.src = JENNA_PLAYING_SRC;
+    // Always show virus page first (as intended)
+    showVirusPage();
 }
 
 function showSecretPage() {
