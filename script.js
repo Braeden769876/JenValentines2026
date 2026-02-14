@@ -70,7 +70,7 @@ let selectedAnswers = [];
 // Audio elements
 const wrongAudio = new Audio('sounds/WRONG.wav');
 const rightAudio = new Audio('sounds/RIGHT.wav');
-const notificationAudio = new Audio('sounds/notification.wav');
+const notificationAudio = new Audio('sounds/NOTIFICATION.wav');
 const scaryAudio = new Audio('sounds/freesound_community-tension01_loop-67896.mp3');
 const loveAudio = new Audio('sounds/ILOVEYOU.wav');
 
